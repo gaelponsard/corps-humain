@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+/* font-family: 'Arvo', serif; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arvo', serif;
+    background-color: #EDEDED;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+h1, main {
+    margin: 50px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 540px;
+    margin-bottom: 80px;
+    position: relative;
+    width: 402px;
+    /* besoin width précis pour les absolute qui se réfèrent au main */
+}
+
+a {
+    outline:none;
+}
+
+#corps {
+    background-image: url('img/humain.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 192px;
+    position: relative;
+}
+
+#placeholder {
+    width: 210px;
+}
+
+.desc {
+    height: 0.5%;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    text-align: left;
+    overflow: hidden;
+
+    filter: opacity(0%);
+    transition: filter 300ms;
+}
+
+.cercle {
+    background-color: black;
+    border-radius: 50%;
+    height: 62px;
+    width: 62px;
+    filter: opacity(70%);
+    z-index: 9;
+}
+
+.cercle:hover {
+    background-color: red;
+}
+
+/* positionnements et relations descriptions */
+
+#epaule {
+    position: absolute;
+    top: 90px;
+    left: 120px;
+}
+
+#epaule:hover ~ #placeholder #desc-epaule {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#tete {
+    position: absolute;
+    top: 10px;
+    left: 65px;
+}
+
+
+#tete:hover ~ #placeholder #desc-tete {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#genou {
+    position: absolute;
+    top: 350px;
+    left: 40px;
+}
+
+
+#genou:hover ~ #placeholder #desc-genou {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#poignet {
+    position: absolute;
+    top: 200px;
+    left: 130px;
+}
+
+
+#poignet:hover ~ #placeholder #desc-poignet {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
